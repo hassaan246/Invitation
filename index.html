@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hassaan & Asifa — Engagement Ceremony</title>
+<meta property="og:title" content="You're invited — Hassaan & Asifa Engagement" />
+<meta property="og:description" content="With immense joy, we invite you to our engagement ceremony on 29th November 2026 at The Village Lake, Varanasi." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --emerald-deep: #0d3b2e;
+    --emerald: #14523f;
+    --emerald-soft: #1e6b52;
+    --gold: #c9a961;
+    --gold-soft: #d9bd7a;
+    --gold-deep: #a08340;
+    --cream: #f7f1e3;
+    --cream-warm: #f2ead5;
+    --ink: #1a1a1a;
+    --ink-soft: #3a3a3a;
+    --white-soft: #fbf8f0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Cormorant Garamond', serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.5;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(201, 169, 97, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 80% 90%, rgba(20, 82, 63, 0.06) 0%, transparent 40%);
+  }
+
+  .invite-wrap {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .invite {
+    width: 100%;
+    max-width: 480px;
+    background: linear-gradient(180deg, var(--white-soft) 0%, var(--cream-warm) 100%);
+    border: 1px solid var(--gold);
+    padding: 32px 28px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(13, 59, 46, 0.12);
+    text-align: center;
+  }
+
+  /* Corner ornaments */
+  .invite::before,
+  .invite::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--gold);
+  }
+  .invite::before { top: 8px; left: 8px; border-right: none; border-bottom: none; }
+  .invite::after { bottom: 8px; right: 8px; border-left: none; border-top: none; }
+
+  .bismillah {
+    font-family: 'Amiri', serif;
+    font-size: 20px;
+    color: var(--emerald);
+    margin-bottom: 4px;
+    direction: rtl;
+  }
+
+  .bismillah-translit {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--gold-deep);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 12px;
+  }
+
+  .names {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: var(--emerald-deep);
+    line-height: 1;
+    margin: 8px 0;
+  }
+  .name-1, .name-2 {
+    font-size: 38px;
+    display: block;
+    font-style: italic;
+  }
+  .amp {
+    font-family: 'Amiri', serif;
+    font-size: 26px;
+    color: var(--gold);
+    display: block;
+    margin: 4px 0;
+    font-weight: 400;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 14px auto;
+    width: 70%;
+  }
+  .divider .line {
+    flex: 1;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+  .divider .ornament {
+    padding: 0 12px;
+    color: var(--gold);
+    font-size: 14px;
+  }
+
+  .invitation-text {
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin: 12px auto;
+    font-style: italic;
+    max-width: 320px;
+    line-height: 1.5;
+  }
+
+  .event-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin: 6px 0 14px;
+  }
+
+  /* Date block - compact horizontal */
+  .date-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 14px 0;
+  }
+  .date-side {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    color: var(--emerald);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 0;
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+  }
+  .date-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px;
+    font-weight: 400;
+    color: var(--emerald-deep);
+    line-height: 1;
+  }
+  .date-month {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-top: 2px;
+  }
+
+  /* Venue - compact */
+  .venue {
+    margin: 16px 0;
+    padding: 12px 16px;
+    background: rgba(20, 82, 63, 0.04);
+    border-left: 2px solid var(--gold);
+    border-right: 2px solid var(--gold);
+  }
+  .venue-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 4px;
+  }
+  .venue-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--emerald-deep);
+    margin-bottom: 2px;
+  }
+  .venue-city {
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  .venue-time {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--emerald);
+    margin-top: 6px;
+    text-transform: uppercase;
+  }
+
+  /* RSVP - THE STAR */
+  .rsvp-cta {
+    display: block;
+    width: 100%;
+    background: var(--emerald-deep);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 18px;
+    font-weight: 500;
+    box-shadow: 0 10px 30px rgba(13, 59, 46, 0.25);
+    transition: all 0.3s;
+    animation: gentlePulse 2.5s ease-in-out infinite;
+  }
+  .rsvp-cta:hover {
+    background: var(--emerald);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(13, 59, 46, 0.35);
+  }
+  @keyframes gentlePulse {
+    0%, 100% { box-shadow: 0 10px 30px rgba(13, 59, 46, 0.25); }
+    50% { box-shadow: 0 10px 40px rgba(201, 169, 97, 0.5); }
+  }
+
+  .rsvp-note {
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--gold-deep);
+    text-transform: uppercase;
+  }
+
+  .families {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(201, 169, 97, 0.4);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 12px;
+  }
+  .families strong {
+    color: var(--emerald-deep);
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  /* MODAL - RSVP form */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(13, 59, 46, 0.6);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    animation: fadeIn 0.3s ease;
+  }
+  .modal-overlay.active { display: flex; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .modal {
+    background: var(--cream);
+    border: 1px solid var(--gold);
+    padding: 32px 24px;
+    max-width: 420px;
+    width: 100%;
+    max-height: 92vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.4s ease;
+  }
+  @keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--emerald);
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  .modal h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: var(--emerald-deep);
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 4px;
+  }
+  .modal-sub {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 20px;
+  }
+
+  .form-group { margin-bottom: 14px; }
+  .form-group label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--emerald);
+    margin-bottom: 5px;
+  }
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--gold);
+    background: var(--white-soft);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: var(--ink);
+    outline: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: var(--emerald);
+  }
+  .radio-group {
+    display: flex;
+    gap: 10px;
+  }
+  .radio-option {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--gold);
+    background: var(--white-soft);
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: var(--ink-soft);
+    transition: all 0.2s;
+  }
+  .radio-option.selected {
+    background: var(--emerald);
+    color: var(--cream);
+    border-color: var(--emerald);
+  }
+  .submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--emerald-deep);
+    color: var(--cream);
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: all 0.3s;
+  }
+  .submit-btn:hover { background: var(--emerald); }
+  .submit-btn:disabled { opacity: 0.6; cursor: wait; }
+
+  /* THE REVEAL */
+  .reveal {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #0d3b2e 0%, #14523f 100%);
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px;
+    overflow-y: auto;
+    color: var(--cream);
+    text-align: center;
+  }
+  .reveal.active { display: flex; }
+
+  .reveal-inner {
+    max-width: 520px;
+    width: 100%;
+    padding: 24px 0;
+  }
+
+  .reveal-emoji {
+    font-size: 72px;
+    margin-bottom: 12px;
+    display: inline-block;
+    animation: wiggle 1s ease infinite;
+  }
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-8deg); }
+    50% { transform: rotate(8deg); }
+  }
+
+  .reveal-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--gold-soft);
+    line-height: 1;
+    margin-bottom: 6px;
+    font-style: italic;
+  }
+  .reveal-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .reveal-message {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(201, 169, 97, 0.3);
+    padding: 24px 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    backdrop-filter: blur(10px);
+  }
+  .reveal-message p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--cream);
+    margin-bottom: 14px;
+  }
+  .reveal-message p:last-child { margin-bottom: 0; }
+  .reveal-message em { color: var(--gold-soft); }
+  .reveal-message strong { color: var(--gold-soft); font-weight: 600; }
+
+  .reveal-promise {
+    background: var(--gold);
+    color: var(--emerald-deep);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .reveal-promise .badge {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    opacity: 0.7;
+  }
+  .reveal-promise .promise-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.35;
+  }
+
+  .reveal-signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--gold-soft);
+    margin-top: 16px;
+  }
+  .reveal-signature small {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-top: 5px;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+
+  .share-btn {
+    display: inline-block;
+    background: transparent;
+    color: var(--gold-soft);
+    border: 1px solid var(--gold);
+    padding: 12px 28px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s;
+  }
+  .share-btn:hover { background: var(--gold); color: var(--emerald-deep); }
+
+  /* Confetti */
+  .confetti {
+    position: fixed;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    z-index: 201;
+    pointer-events: none;
+    animation: fall linear forwards;
+  }
+  @keyframes fall {
+    to {
+      transform: translateY(105vh) rotate(720deg);
+      opacity: 0;
+    }
+  }
+
+  /* Small screens */
+  @media (max-height: 700px) {
+    .invite { padding: 24px 22px; }
+    .name-1, .name-2 { font-size: 32px; }
+    .amp { font-size: 22px; }
+    .date-num { font-size: 36px; }
+    .bismillah { font-size: 18px; }
+    .invitation-text { font-size: 13px; margin: 10px auto; }
+  }
+
+  @media (max-width: 380px) {
+    .name-1, .name-2 { font-size: 32px; }
+    .reveal-title { font-size: 42px; }
+    .reveal-message p { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="invite-wrap">
+  <div class="invite">
+    <div class="bismillah">بِسْمِ اللَّٰهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+    <div class="bismillah-translit">In the name of Allah</div>
+
+    <div class="eyebrow">Together with our families</div>
+
+    <div class="names">
+      <span class="name-1">Hassaan</span>
+      <span class="amp">&amp;</span>
+      <span class="name-2">Asifa</span>
+    </div>
+
+    <div class="divider">
+      <span class="line"></span>
+      <span class="ornament">❋</span>
+      <span class="line"></span>
+    </div>
+
+    <p class="invitation-text">
+      request the honour of your presence to celebrate their engagement
+    </p>
+
+    <div class="event-name">Mangni Ceremony</div>
+
+    <div class="date-block">
+      <div class="date-side">Sunday</div>
+      <div>
+        <div class="date-num">29</div>
+        <div class="date-month">November</div>
+      </div>
+      <div class="date-side">2026</div>
+    </div>
+
+    <div class="venue">
+      <div class="venue-label">Venue</div>
+      <div class="venue-name">The Village Lake</div>
+      <div class="venue-city">Ramna, Varanasi</div>
+      <div class="venue-time">6:30 PM onwards</div>
+    </div>
+
+    <button class="rsvp-cta" onclick="openRSVP()">RSVP Now →</button>
+    <div class="rsvp-note">Kindly respond by 20th November</div>
+
+    <div class="families">
+      With love from the families of<br>
+      <strong>Ansari &amp; Ansari</strong> · Bhadohi
+    </div>
+  </div>
+</div>
+
+<!-- RSVP MODAL -->
+<div class="modal-overlay" id="rsvpModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeRSVP()">×</button>
+    <h2>Confirm your presence</h2>
+    <div class="modal-sub">Hassaan &amp; Asifa · 29 Nov 2026</div>
+
+    <form id="rsvpForm" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label>Your full name</label>
+        <input type="text" name="name" required placeholder="Enter your name" />
+      </div>
+
+      <div class="form-group">
+        <label>Contact number</label>
+        <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" />
+      </div>
+
+      <div class="form-group">
+        <label>Will you attend?</label>
+        <div class="radio-group">
+          <div class="radio-option selected" data-value="yes" onclick="selectRadio(this, 'attending')">Yes, gladly</div>
+          <div class="radio-option" data-value="no" onclick="selectRadio(this, 'attending')">Cannot make it</div>
+        </div>
+        <input type="hidden" name="attending" id="attending" value="yes" />
+      </div>
+
+      <div class="form-group">
+        <label>Number of guests</label>
+        <select name="guests" required>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5+</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Meal preference</label>
+        <select name="meal" required>
+          <option value="">Please choose</option>
+          <option value="veg">Vegetarian</option>
+          <option value="non-veg">Non-vegetarian</option>
+          <option value="both">No preference</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submitBtn">Submit RSVP</button>
+    </form>
+  </div>
+</div>
+
+<!-- THE REVEAL -->
+<div class="reveal" id="reveal">
+  <div class="reveal-inner">
+    <div class="reveal-emoji">🤡</div>
+    <h1 class="reveal-title">Gotcha!</h1>
+    <div class="reveal-sub">You've been beautifully pranked</div>
+
+    <div class="reveal-message">
+      <p>
+        Okay okay, hands up — <strong>there is no engagement.</strong>
+        No Asifa. No Village Lake booking. No rings.
+        Just me, sitting here, watching you actually take out your phone to check flights to Varanasi. 😭
+      </p>
+      <p>
+        Here's the honest part though — I'm sorry. I really am.
+        I started this as a random silly prank and didn't realise how <em>seriously</em> you'd all take it,
+        how quickly you'd start planning, calling family, figuring out gifts, being genuinely happy for me.
+      </p>
+      <p>
+        And that's exactly the moment it hit me: <strong>I have the best friends in the world.</strong>
+        You believed me instantly. You were ready to show up. You cared.
+        I don't deserve that kind of love, but I'm keeping it anyway.
+      </p>
+      <p>
+        So please forgive this idiot. I promise the next time you get an invite from me, it'll be real —
+        and until then, since I owe you an actual celebration…
+      </p>
+    </div>
+
+    <div class="reveal-promise">
+      <div class="badge">A solemn promise</div>
+      <div class="promise-text">"The party is on me — pick the date, pick the place. I'm paying."</div>
+    </div>
+
+    <div class="reveal-signature">
+      With genuine love and 100% guilt,<br>
+      Hassaan ✨
+      <small>Your very sorry, very single friend</small>
+    </div>
+
+    <button class="share-btn" onclick="shareReveal()">Share the chaos 📤</button>
+  </div>
+</div>
+
+<script>
+  // RSVP modal
+  function openRSVP() {
+    document.getElementById('rsvpModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeRSVP() {
+    document.getElementById('rsvpModal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Radio button styling
+  function selectRadio(el, name) {
+    const siblings = el.parentElement.querySelectorAll('.radio-option');
+    siblings.forEach(s => s.classList.remove('selected'));
+    el.classList.add('selected');
+    document.getElementById(name).value = el.dataset.value;
+  }
+
+  // Handle RSVP submit — the reveal moment
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    setTimeout(() => {
+      btn.textContent = 'Confirming...';
+    }, 800);
+
+    setTimeout(() => {
+      closeRSVP();
+      triggerReveal();
+    }, 1800);
+  }
+
+  // The reveal
+  function triggerReveal() {
+    document.getElementById('reveal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+    launchConfetti();
+  }
+
+  // Confetti
+  function launchConfetti() {
+    const colors = ['#c9a961', '#14523f', '#f7f1e3', '#d9bd7a', '#1e6b52'];
+    const shapes = ['💍', '🎉', '💚', '✨', '🤡', '🎊', '💛'];
+    for (let i = 0; i < 60; i++) {
+      setTimeout(() => {
+        const el = document.createElement('div');
+        el.className = 'confetti';
+        el.style.left = Math.random() * 100 + 'vw';
+        el.style.animationDuration = (Math.random() * 2 + 2.5) + 's';
+        if (Math.random() > 0.5) {
+          el.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+          el.style.fontSize = '24px';
+          el.style.background = 'transparent';
+        } else {
+          el.style.background = colors[Math.floor(Math.random() * colors.length)];
+          el.style.transform = `rotate(${Math.random() * 360}deg)`;
+        }
+        document.body.appendChild(el);
+        setTimeout(() => el.remove(), 5000);
+      }, i * 40);
+    }
+  }
+
+  // Share button
+  function shareReveal() {
+    const url = window.location.href;
+    const text = "I just fell for the world's most elaborate wedding prank 😭 Click and don't trust anyone: ";
+    if (navigator.share) {
+      navigator.share({ title: 'Wedding Prank', text: text, url: url }).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(text + url).then(() => {
+        alert('Link copied! Now go get your friends 😈');
+      });
+    }
+  }
+
+  // Close modal on background click
+  document.getElementById('rsvpModal').addEventListener('click', (e) => {
+    if (e.target.id === 'rsvpModal') closeRSVP();
+  });
+</script>
+
+</body>
+</html>
