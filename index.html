@@ -284,136 +284,6 @@
     font-style: normal;
   }
 
-  /* MODAL - RSVP form */
-  .modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(13, 59, 46, 0.6);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    z-index: 100;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-    animation: fadeIn 0.3s ease;
-  }
-  .modal-overlay.active { display: flex; }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  .modal {
-    background: var(--cream);
-    border: 1px solid var(--gold);
-    padding: 32px 24px;
-    max-width: 420px;
-    width: 100%;
-    max-height: 92vh;
-    overflow-y: auto;
-    position: relative;
-    animation: slideUp 0.4s ease;
-  }
-  @keyframes slideUp {
-    from { transform: translateY(30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-
-  .modal-close {
-    position: absolute;
-    top: 10px;
-    right: 14px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: var(--emerald);
-    cursor: pointer;
-    line-height: 1;
-  }
-
-  .modal h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    color: var(--emerald-deep);
-    text-align: center;
-    font-style: italic;
-    margin-bottom: 4px;
-  }
-  .modal-sub {
-    text-align: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 9px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--gold-deep);
-    margin-bottom: 20px;
-  }
-
-  .form-group { margin-bottom: 14px; }
-  .form-group label {
-    display: block;
-    font-family: 'Inter', sans-serif;
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--emerald);
-    margin-bottom: 5px;
-  }
-  .form-group input,
-  .form-group select {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid var(--gold);
-    background: var(--white-soft);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 15px;
-    color: var(--ink);
-    outline: none;
-  }
-  .form-group input:focus,
-  .form-group select:focus {
-    border-color: var(--emerald);
-  }
-  .radio-group {
-    display: flex;
-    gap: 10px;
-  }
-  .radio-option {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid var(--gold);
-    background: var(--white-soft);
-    text-align: center;
-    cursor: pointer;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 14px;
-    color: var(--ink-soft);
-    transition: all 0.2s;
-  }
-  .radio-option.selected {
-    background: var(--emerald);
-    color: var(--cream);
-    border-color: var(--emerald);
-  }
-  .submit-btn {
-    width: 100%;
-    padding: 14px;
-    background: var(--emerald-deep);
-    color: var(--cream);
-    border: none;
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-top: 8px;
-    transition: all 0.3s;
-  }
-  .submit-btn:hover { background: var(--emerald); }
-  .submit-btn:disabled { opacity: 0.6; cursor: wait; }
-
   /* THE REVEAL */
   .reveal {
     position: fixed;
@@ -619,66 +489,13 @@
       <div class="venue-time">6:30 PM onwards</div>
     </div>
 
-    <button class="rsvp-cta" onclick="openRSVP()">RSVP Now →</button>
+    <button class="rsvp-cta" id="rsvpBtn" onclick="handleRSVP()">RSVP Now →</button>
     <div class="rsvp-note">Kindly respond by 20th November</div>
 
     <div class="families">
       With love from the families of<br>
       <strong>Ansari &amp; Ansari</strong> · Bhadohi
     </div>
-  </div>
-</div>
-
-<!-- RSVP MODAL -->
-<div class="modal-overlay" id="rsvpModal">
-  <div class="modal">
-    <button class="modal-close" onclick="closeRSVP()">×</button>
-    <h2>Confirm your presence</h2>
-    <div class="modal-sub">Hassaan &amp; Asifa · 29 Nov 2026</div>
-
-    <form id="rsvpForm" onsubmit="handleSubmit(event)">
-      <div class="form-group">
-        <label>Your full name</label>
-        <input type="text" name="name" required placeholder="Enter your name" />
-      </div>
-
-      <div class="form-group">
-        <label>Contact number</label>
-        <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" />
-      </div>
-
-      <div class="form-group">
-        <label>Will you attend?</label>
-        <div class="radio-group">
-          <div class="radio-option selected" data-value="yes" onclick="selectRadio(this, 'attending')">Yes, gladly</div>
-          <div class="radio-option" data-value="no" onclick="selectRadio(this, 'attending')">Cannot make it</div>
-        </div>
-        <input type="hidden" name="attending" id="attending" value="yes" />
-      </div>
-
-      <div class="form-group">
-        <label>Number of guests</label>
-        <select name="guests" required>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5+</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label>Meal preference</label>
-        <select name="meal" required>
-          <option value="">Please choose</option>
-          <option value="veg">Vegetarian</option>
-          <option value="non-veg">Non-vegetarian</option>
-          <option value="both">No preference</option>
-        </select>
-      </div>
-
-      <button type="submit" class="submit-btn" id="submitBtn">Submit RSVP</button>
-    </form>
   </div>
 </div>
 
@@ -727,45 +544,28 @@
 </div>
 
 <script>
-  // RSVP modal
-  function openRSVP() {
-    document.getElementById('rsvpModal').classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeRSVP() {
-    document.getElementById('rsvpModal').classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  // Radio button styling
-  function selectRadio(el, name) {
-    const siblings = el.parentElement.querySelectorAll('.radio-option');
-    siblings.forEach(s => s.classList.remove('selected'));
-    el.classList.add('selected');
-    document.getElementById(name).value = el.dataset.value;
-  }
-
-  // Handle RSVP submit — the reveal moment
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = document.getElementById('submitBtn');
+  // Handle RSVP click — the reveal moment
+  function handleRSVP() {
+    const btn = document.getElementById('rsvpBtn');
     btn.disabled = true;
+    btn.style.opacity = '0.7';
+    btn.style.cursor = 'wait';
     btn.textContent = 'Sending...';
 
     setTimeout(() => {
-      btn.textContent = 'Confirming...';
-    }, 800);
+      btn.textContent = 'Confirming your presence...';
+    }, 700);
 
     setTimeout(() => {
-      closeRSVP();
       triggerReveal();
-    }, 1800);
+    }, 1600);
   }
 
   // The reveal
   function triggerReveal() {
     document.getElementById('reveal').classList.add('active');
     document.body.style.overflow = 'hidden';
+    window.scrollTo(0, 0);
     launchConfetti();
   }
 
@@ -806,10 +606,7 @@
     }
   }
 
-  // Close modal on background click
-  document.getElementById('rsvpModal').addEventListener('click', (e) => {
-    if (e.target.id === 'rsvpModal') closeRSVP();
-  });
+
 </script>
 
 </body>
