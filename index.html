@@ -3,35 +3,34 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Hassaan & Asifa — Engagement Ceremony</title>
-<meta property="og:title" content="You're invited — Hassaan & Asifa Engagement" />
-<meta property="og:description" content="With immense joy, we invite you to our engagement ceremony on 29th November 2026 at The Village Lake, Varanasi." />
+<title>Vikas &amp; Anamita — Sagai Ceremony</title>
+<meta property="og:title" content="You're invited — Vikas &amp; Anamita Engagement" />
+<meta property="og:description" content="With divine blessings, we invite you to our Sagai ceremony on 3rd March 2027 at Radisson, Gorakhpur." />
 <meta property="og:type" content="website" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
   :root {
-    --emerald-deep: #0d3b2e;
-    --emerald: #14523f;
-    --emerald-soft: #1e6b52;
+    --maroon-deep: #6b1a24;
+    --maroon: #8b1e2d;
+    --maroon-soft: #a62638;
     --gold: #c9a961;
-    --gold-soft: #d9bd7a;
+    --gold-soft: #e0c57f;
     --gold-deep: #a08340;
-    --cream: #f7f1e3;
-    --cream-warm: #f2ead5;
+    --saffron: #d97706;
+    --cream: #faf3e3;
+    --cream-warm: #f4e9d0;
+    --ivory: #fdf8ec;
     --ink: #1a1a1a;
     --ink-soft: #3a3a3a;
-    --white-soft: #fbf8f0;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html, body {
-    height: 100%;
-  }
+  html, body { height: 100%; }
 
   body {
     font-family: 'Cormorant Garamond', serif;
@@ -40,8 +39,8 @@
     line-height: 1.5;
     overflow-x: hidden;
     background-image:
-      radial-gradient(circle at 20% 10%, rgba(201, 169, 97, 0.08) 0%, transparent 40%),
-      radial-gradient(circle at 80% 90%, rgba(20, 82, 63, 0.06) 0%, transparent 40%);
+      radial-gradient(circle at 20% 10%, rgba(201, 169, 97, 0.1) 0%, transparent 40%),
+      radial-gradient(circle at 80% 90%, rgba(139, 30, 45, 0.08) 0%, transparent 40%);
   }
 
   .invite-wrap {
@@ -56,72 +55,101 @@
   .invite {
     width: 100%;
     max-width: 480px;
-    background: linear-gradient(180deg, var(--white-soft) 0%, var(--cream-warm) 100%);
-    border: 1px solid var(--gold);
+    background: linear-gradient(180deg, var(--ivory) 0%, var(--cream-warm) 100%);
+    border: 2px solid var(--gold);
     padding: 32px 28px;
     position: relative;
-    box-shadow: 0 20px 60px rgba(13, 59, 46, 0.12);
+    box-shadow: 0 20px 60px rgba(107, 26, 36, 0.18);
     text-align: center;
   }
 
-  /* Corner ornaments */
-  .invite::before,
-  .invite::after {
+  /* Outer ornamental border */
+  .invite::before {
     content: '';
     position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--gold);
-  }
-  .invite::before { top: 8px; left: 8px; border-right: none; border-bottom: none; }
-  .invite::after { bottom: 8px; right: 8px; border-left: none; border-top: none; }
-
-  .bismillah {
-    font-family: 'Amiri', serif;
-    font-size: 20px;
-    color: var(--emerald);
-    margin-bottom: 4px;
-    direction: rtl;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    border: 1px solid var(--maroon);
+    pointer-events: none;
+    opacity: 0.4;
   }
 
-  .bismillah-translit {
+  /* Corner mandalas */
+  .corner {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    color: var(--gold-deep);
+    font-size: 24px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .corner-tl { top: 10px; left: 10px; }
+  .corner-tr { top: 10px; right: 10px; }
+  .corner-bl { bottom: 10px; left: 10px; }
+  .corner-br { bottom: 10px; right: 10px; }
+
+  .om-symbol {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 36px;
+    color: var(--maroon);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .ganesh-translit {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 11px;
+    font-size: 12px;
     color: var(--gold-deep);
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 20px;
   }
 
   .eyebrow {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Cinzel', serif;
     font-size: 10px;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--gold-deep);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    font-weight: 500;
   }
 
   .names {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 500;
-    color: var(--emerald-deep);
+    color: var(--maroon-deep);
     line-height: 1;
-    margin: 8px 0;
+    margin: 10px 0;
   }
   .name-1, .name-2 {
-    font-size: 38px;
+    font-size: 36px;
     display: block;
     font-style: italic;
   }
   .amp {
-    font-family: 'Amiri', serif;
-    font-size: 26px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
     color: var(--gold);
     display: block;
     margin: 4px 0;
     font-weight: 400;
+    font-style: italic;
+  }
+  .weds {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-top: 8px;
+    font-weight: 500;
   }
 
   .divider {
@@ -129,39 +157,40 @@
     align-items: center;
     justify-content: center;
     margin: 14px auto;
-    width: 70%;
+    width: 75%;
   }
   .divider .line {
     flex: 1;
     height: 1px;
     background: var(--gold);
-    opacity: 0.5;
+    opacity: 0.6;
   }
   .divider .ornament {
-    padding: 0 12px;
-    color: var(--gold);
-    font-size: 14px;
+    padding: 0 14px;
+    color: var(--maroon);
+    font-size: 16px;
   }
 
   .invitation-text {
     font-size: 14px;
     color: var(--ink-soft);
-    margin: 12px auto;
+    margin: 10px auto;
     font-style: italic;
-    max-width: 320px;
-    line-height: 1.5;
+    max-width: 340px;
+    line-height: 1.55;
   }
 
   .event-name {
-    font-family: 'Inter', sans-serif;
-    font-size: 10px;
-    letter-spacing: 4px;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 5px;
     text-transform: uppercase;
-    color: var(--gold-deep);
-    margin: 6px 0 14px;
+    color: var(--maroon);
+    margin: 8px 0 14px;
+    font-weight: 600;
   }
 
-  /* Date block - compact horizontal */
+  /* Date block */
   .date-block {
     display: flex;
     align-items: center;
@@ -170,74 +199,79 @@
     margin: 14px 0;
   }
   .date-side {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cinzel', serif;
     font-size: 11px;
-    color: var(--emerald);
+    color: var(--maroon);
     letter-spacing: 2px;
     text-transform: uppercase;
     padding: 6px 0;
     border-top: 1px solid var(--gold);
     border-bottom: 1px solid var(--gold);
+    font-weight: 500;
   }
   .date-num {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 44px;
-    font-weight: 400;
-    color: var(--emerald-deep);
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--maroon-deep);
     line-height: 1;
   }
   .date-month {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cinzel', serif;
     font-size: 11px;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--gold-deep);
     margin-top: 2px;
+    font-weight: 500;
   }
 
-  /* Venue - compact */
+  /* Venue */
   .venue {
     margin: 16px 0;
-    padding: 12px 16px;
-    background: rgba(20, 82, 63, 0.04);
+    padding: 14px 16px;
+    background: rgba(139, 30, 45, 0.05);
     border-left: 2px solid var(--gold);
     border-right: 2px solid var(--gold);
   }
   .venue-label {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Cinzel', serif;
     font-size: 9px;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--gold-deep);
     margin-bottom: 4px;
+    font-weight: 500;
   }
   .venue-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
+    font-size: 22px;
     font-style: italic;
-    color: var(--emerald-deep);
+    color: var(--maroon-deep);
     margin-bottom: 2px;
+    font-weight: 500;
   }
   .venue-city {
     font-size: 13px;
     color: var(--ink-soft);
   }
   .venue-time {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Cinzel', serif;
     font-size: 10px;
     letter-spacing: 2px;
-    color: var(--emerald);
-    margin-top: 6px;
+    color: var(--maroon);
+    margin-top: 8px;
     text-transform: uppercase;
+    font-weight: 500;
   }
 
-  /* RSVP - THE STAR */
+  /* RSVP */
   .rsvp-cta {
     display: block;
     width: 100%;
-    background: var(--emerald-deep);
-    color: var(--cream);
-    font-family: 'Inter', sans-serif;
+    background: var(--maroon-deep);
+    color: var(--ivory);
+    font-family: 'Cinzel', serif;
     font-size: 12px;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -245,24 +279,24 @@
     border: none;
     cursor: pointer;
     margin-top: 18px;
-    font-weight: 500;
-    box-shadow: 0 10px 30px rgba(13, 59, 46, 0.25);
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(107, 26, 36, 0.3);
     transition: all 0.3s;
     animation: gentlePulse 2.5s ease-in-out infinite;
   }
   .rsvp-cta:hover {
-    background: var(--emerald);
+    background: var(--maroon);
     transform: translateY(-2px);
-    box-shadow: 0 15px 40px rgba(13, 59, 46, 0.35);
+    box-shadow: 0 15px 40px rgba(107, 26, 36, 0.4);
   }
   @keyframes gentlePulse {
-    0%, 100% { box-shadow: 0 10px 30px rgba(13, 59, 46, 0.25); }
+    0%, 100% { box-shadow: 0 10px 30px rgba(107, 26, 36, 0.3); }
     50% { box-shadow: 0 10px 40px rgba(201, 169, 97, 0.5); }
   }
 
   .rsvp-note {
     margin-top: 10px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Cinzel', serif;
     font-size: 9px;
     letter-spacing: 2px;
     color: var(--gold-deep);
@@ -272,14 +306,14 @@
   .families {
     margin-top: 18px;
     padding-top: 16px;
-    border-top: 1px solid rgba(201, 169, 97, 0.4);
+    border-top: 1px solid rgba(201, 169, 97, 0.5);
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     color: var(--ink-soft);
     font-size: 12px;
   }
   .families strong {
-    color: var(--emerald-deep);
+    color: var(--maroon-deep);
     font-weight: 500;
     font-style: normal;
   }
@@ -288,7 +322,7 @@
   .reveal {
     position: fixed;
     inset: 0;
-    background: linear-gradient(135deg, #0d3b2e 0%, #14523f 100%);
+    background: linear-gradient(135deg, #6b1a24 0%, #8b1e2d 100%);
     z-index: 200;
     display: none;
     flex-direction: column;
@@ -328,7 +362,7 @@
     font-style: italic;
   }
   .reveal-sub {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Cinzel', serif;
     font-size: 11px;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -357,18 +391,19 @@
 
   .reveal-promise {
     background: var(--gold);
-    color: var(--emerald-deep);
+    color: var(--maroon-deep);
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
   }
   .reveal-promise .badge {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Cinzel', serif;
     font-size: 10px;
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 6px;
-    opacity: 0.7;
+    opacity: 0.75;
+    font-weight: 600;
   }
   .reveal-promise .promise-text {
     font-family: 'Cormorant Garamond', serif;
@@ -387,7 +422,7 @@
   }
   .reveal-signature small {
     display: block;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Cinzel', serif;
     font-size: 9px;
     letter-spacing: 3px;
     color: var(--gold);
@@ -402,7 +437,7 @@
     color: var(--gold-soft);
     border: 1px solid var(--gold);
     padding: 12px 28px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Cinzel', serif;
     font-size: 10px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -410,7 +445,7 @@
     margin-top: 20px;
     transition: all 0.3s;
   }
-  .share-btn:hover { background: var(--gold); color: var(--emerald-deep); }
+  .share-btn:hover { background: var(--gold); color: var(--maroon-deep); }
 
   /* Confetti */
   .confetti {
@@ -432,15 +467,16 @@
   /* Small screens */
   @media (max-height: 700px) {
     .invite { padding: 24px 22px; }
-    .name-1, .name-2 { font-size: 32px; }
-    .amp { font-size: 22px; }
-    .date-num { font-size: 36px; }
-    .bismillah { font-size: 18px; }
-    .invitation-text { font-size: 13px; margin: 10px auto; }
+    .name-1, .name-2 { font-size: 30px; }
+    .amp { font-size: 26px; }
+    .date-num { font-size: 40px; }
+    .om-symbol { font-size: 30px; }
+    .invitation-text { font-size: 13px; margin: 8px auto; }
   }
 
   @media (max-width: 380px) {
-    .name-1, .name-2 { font-size: 32px; }
+    .name-1, .name-2 { font-size: 28px; }
+    .amp { font-size: 24px; }
     .reveal-title { font-size: 42px; }
     .reveal-message p { font-size: 15px; }
   }
@@ -450,51 +486,57 @@
 
 <div class="invite-wrap">
   <div class="invite">
-    <div class="bismillah">بِسْمِ اللَّٰهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
-    <div class="bismillah-translit">In the name of Allah</div>
+    <div class="corner corner-tl">❋</div>
+    <div class="corner corner-tr">❋</div>
+    <div class="corner corner-bl">❋</div>
+    <div class="corner corner-br">❋</div>
 
-    <div class="eyebrow">Together with our families</div>
+    <div class="om-symbol">ॐ</div>
+    <div class="ganesh-translit">Shubh Vivah · With Divine Blessings</div>
+
+    <div class="eyebrow">With the blessings of our elders</div>
 
     <div class="names">
-      <span class="name-1">Hassaan</span>
+      <span class="name-1">Vikas Tiwari</span>
       <span class="amp">&amp;</span>
-      <span class="name-2">Asifa</span>
+      <span class="name-2">Anamita Pandey</span>
     </div>
+    <div class="weds">— are getting engaged —</div>
 
     <div class="divider">
       <span class="line"></span>
-      <span class="ornament">❋</span>
+      <span class="ornament">✦</span>
       <span class="line"></span>
     </div>
 
     <p class="invitation-text">
-      request the honour of your presence to celebrate their engagement
+      request the pleasure of your gracious company on the auspicious occasion of their engagement
     </p>
 
-    <div class="event-name">Mangni Ceremony</div>
+    <div class="event-name">Sagai Ceremony</div>
 
     <div class="date-block">
-      <div class="date-side">Sunday</div>
+      <div class="date-side">Wednesday</div>
       <div>
-        <div class="date-num">29</div>
-        <div class="date-month">November</div>
+        <div class="date-num">03</div>
+        <div class="date-month">March</div>
       </div>
-      <div class="date-side">2026</div>
+      <div class="date-side">2027</div>
     </div>
 
     <div class="venue">
       <div class="venue-label">Venue</div>
-      <div class="venue-name">The Village Lake</div>
-      <div class="venue-city">Ramna, Varanasi</div>
-      <div class="venue-time">6:30 PM onwards</div>
+      <div class="venue-name">Radisson Hotel</div>
+      <div class="venue-city">Gorakhpur, Uttar Pradesh</div>
+      <div class="venue-time">7:00 PM onwards</div>
     </div>
 
     <button class="rsvp-cta" id="rsvpBtn" onclick="handleRSVP()">RSVP Now →</button>
-    <div class="rsvp-note">Kindly respond by 20th November</div>
+    <div class="rsvp-note">Kindly respond by 24th February</div>
 
     <div class="families">
-      With love from the families of<br>
-      <strong>Ansari &amp; Ansari</strong> · Bhadohi
+      With warm regards from the families of<br>
+      <strong>Tiwari &amp; Pandey</strong> · Gorakhpur
     </div>
   </div>
 </div>
@@ -508,9 +550,9 @@
 
     <div class="reveal-message">
       <p>
-        Okay okay, hands up — <strong>there is no engagement.</strong>
-        No Asifa. No Village Lake booking. No rings.
-        Just me, sitting here, watching you actually take out your phone to check flights to Varanasi. 😭
+        Okay okay, hands up — <strong>there is no sagai.</strong>
+        No Anamita. No Radisson booking. No rings.
+        Just me, sitting here, watching you actually check flights to Gorakhpur. 😭
       </p>
       <p>
         Here's the honest part though — I'm sorry. I really am.
@@ -535,7 +577,7 @@
 
     <div class="reveal-signature">
       With genuine love and 100% guilt,<br>
-      Hassaan ✨
+      Vikas ✨
       <small>Your very sorry, very single friend</small>
     </div>
 
@@ -571,8 +613,8 @@
 
   // Confetti
   function launchConfetti() {
-    const colors = ['#c9a961', '#14523f', '#f7f1e3', '#d9bd7a', '#1e6b52'];
-    const shapes = ['💍', '🎉', '💚', '✨', '🤡', '🎊', '💛'];
+    const colors = ['#c9a961', '#8b1e2d', '#faf3e3', '#e0c57f', '#d97706'];
+    const shapes = ['💍', '🎉', '🌺', '✨', '🤡', '🎊', '🪔', '🌸'];
     for (let i = 0; i < 60; i++) {
       setTimeout(() => {
         const el = document.createElement('div');
@@ -596,17 +638,15 @@
   // Share button
   function shareReveal() {
     const url = window.location.href;
-    const text = "I just fell for the world's most elaborate wedding prank 😭 Click and don't trust anyone: ";
+    const text = "I just fell for the world's most elaborate sagai prank 😭 Click karo aur kisi pe trust mat karna: ";
     if (navigator.share) {
-      navigator.share({ title: 'Wedding Prank', text: text, url: url }).catch(() => {});
+      navigator.share({ title: 'Sagai Prank', text: text, url: url }).catch(() => {});
     } else {
       navigator.clipboard.writeText(text + url).then(() => {
-        alert('Link copied! Now go get your friends 😈');
+        alert('Link copied! Ab apne doston ko trap karo 😈');
       });
     }
   }
-
-
 </script>
 
 </body>
